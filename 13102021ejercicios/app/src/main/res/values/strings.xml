@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">13-10-2021 ejercicios</string>
+    <string name="textoBotonInicial">Esto es un boton</string>
+    <string name="textoLabelInicial">Esto es una etiqueta</string>
+    <string name="textoBotonesCreados">Pulsa</string>
+</resources>

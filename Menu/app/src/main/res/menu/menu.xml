@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity">
+
+    <item android:id="@+id/ajustes"
+            android:title="Ajustes"
+            android:orderInCategory="2"
+            app:showAsAction="never">
+
+        <menu><!-- Submenú -->
+
+            <item android:id="@+id/confFacturas"
+                    android:title="Configuracion de Facturas"
+                    android:orderInCategory="1"/>
+
+            <item android:id="@+id/confPedidos"
+                    android:title="Configuracion de Pedidos"
+                    android:orderInCategory="2"/>
+
+        </menu>
+
+    </item>
+    <item android:id="@+id/Clientes"
+            android:title="Clientes"
+            android:orderInCategory="1"/>
+
+    <item android:icon="@android:drawable/ic_delete"
+            android:title="Matar"
+            android:id="@+id/matar"></item>
+
+    <item android:icon="@android:drawable/ic_menu_edit"
+            android:title="Sanar"
+            android:id="@+id/sanar"></item>
+
+    <item android:icon="@android:drawable/sym_call_incoming"
+            android:title="Enviar Mensaje"
+            android:id="@+id/enviarmensaje"></item>
+
+
+
+    </menu>
