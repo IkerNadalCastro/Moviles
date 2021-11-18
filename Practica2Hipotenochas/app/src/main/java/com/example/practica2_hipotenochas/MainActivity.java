@@ -11,6 +11,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
     //Este metodo solo está hecho para la dificultad facil, luego hay que repetirlo para la media y dificil
     public void init() {
 
-        ArrayList<String> listaHipotenochados = new ArrayList<String>();
-
         int rowsColsEasy = 8;
         int generadorID = 1;
+
+        ArrayList<ImageButton> todasCasillas = new ArrayList<ImageButton>();
 
         TableLayout tl = (TableLayout) findViewById(R.id.TableLayout1);
 
@@ -65,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
                 boton.setLayoutParams(trParams);
 
+                todasCasillas.add(boton);
+
                 row.addView(boton);
 
             }
@@ -85,6 +88,32 @@ public class MainActivity extends AppCompatActivity {
         * */
 
         int hipotenochasEasy = 10;
+        ArrayList<ImageButton> listaHipotenochados = new ArrayList<ImageButton>();
+
+        for (int i = hipotenochasEasy; i > 0; i--) {
+
+            Random r = new Random();
+            int low = 1;
+            int high = rowsColsEasy + 1;
+            int filaSeleccionada = r.nextInt(high-low) + low;
+
+            Random r2 = new Random();
+            int columnaSeleccionada = r2.nextInt(high-low) + low;
+
+            String tagGenerado = ("row" + String.valueOf(filaSeleccionada) + "col" + String.valueOf(columnaSeleccionada));
+
+            for (int j = 0; j < todasCasillas.size(); j++) {
+
+                if (tagGenerado.equalsIgnoreCase(todasCasillas.get(j).getTag().toString())){
+
+                    listaHipotenochados.add(todasCasillas.get(j));
+                    todasCasillas.remove(j);
+
+                }
+
+            }
+
+        }
 
 
     }
