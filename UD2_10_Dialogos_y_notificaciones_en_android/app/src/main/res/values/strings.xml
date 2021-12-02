@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UD2_10_Dialogos_y_notificaciones_en_android</string>
+    <string name="dialog_message">Este es el mensaje de la alerta</string>
+    <string name="dialog_title">Este es el titulo del dialogo</string>
+    <string name="ok">OK</string>
+    <string name="cancel">cancelar</string>
+</resources>
